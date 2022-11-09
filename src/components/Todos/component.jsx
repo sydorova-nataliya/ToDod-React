@@ -4,7 +4,7 @@ import EmptyList from "./EmptyList";
 import EnterTodo from "./EnterTodo";
 import List from "./List";
 
-const TodosComponent = ({ enterTodo, todos, isTodosEmpty, onEnterTodo, onAddTodo, onRemoveTodo }) => (
+const TodosComponent = ({ enterTodo, todos, isTodosEmpty, onEnterTodo, onAddTodo, onRemoveTodo, onCheckTodo  }) => (
   <div className="todos">
     <h1 className="title">Todos</h1>
     
@@ -19,6 +19,7 @@ const TodosComponent = ({ enterTodo, todos, isTodosEmpty, onEnterTodo, onAddTodo
         <List
           todos={todos}
           onRemoveTodo={onRemoveTodo}
+          onCheckTodo={onCheckTodo}
         />
       )
     }
