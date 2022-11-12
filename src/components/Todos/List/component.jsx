@@ -6,12 +6,12 @@ import './styles.scss';
 
 const List = ({ todos, onRemoveTodo, onCheckTodo }) => (
   <ul className="list">
-    {todos.map(({ id, value, checked }) => (
+    {todos.map(({ id, title, completed }) => (
       <Item
         key={id}
         id={id}
-        value={value}
-        checked={checked}
+        title={title}
+        completed={completed}
         onRemoveTodo={onRemoveTodo}
         onCheckTodo={onCheckTodo}
       />

@@ -2,8 +2,8 @@ import React from "react";
 
 import './styles.scss';
 
-const Item = ({ id,checked, value, onRemoveTodo, onCheckTodo }) => (
-  <li  className = {checked ? 'item checkClass' : 'item' }  >
+const Item = ({ id,title, completed, onRemoveTodo, onCheckTodo }) => (
+  <li  className = {completed ? 'item checkClass' : 'item' }  >
     <div className="value">
       <input
         className='checked'
@@ -11,7 +11,7 @@ const Item = ({ id,checked, value, onRemoveTodo, onCheckTodo }) => (
         onClick={() => onCheckTodo(id)}
       />
       
-     {value}
+     {title}
     </div>
     <button onClick={() => onRemoveTodo(id)}>
       x
